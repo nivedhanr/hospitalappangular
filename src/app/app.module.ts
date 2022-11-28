@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SearchComponent } from './search/search.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryComponent,
     DeleteComponent,
-    SearchComponent
+    SearchComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,
