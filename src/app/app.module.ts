@@ -7,18 +7,58 @@ import { EntryComponent } from './entry/entry.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SearchComponent } from './search/search.component';
 import { ViewComponent } from './view/view.component';
+import { NavComponent } from './nav/nav.component';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const myRoute:Routes=[
+
+  {
+
+    path:"",
+
+    component:EntryComponent
+
+  },
+
+  {
+
+    path:"search",
+
+    component:SearchComponent
+
+  },
+
+  {
+
+   path:"delete",
+
+   component:DeleteComponent
+
+  },
+
+  {
+
+    path:"view",
+
+    component:ViewComponent
+
+  }
+
+]
 @NgModule({
   declarations: [
     AppComponent,
     EntryComponent,
     DeleteComponent,
     SearchComponent,
-    ViewComponent
+    ViewComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
